@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Home } from "./routes/Home";
@@ -13,7 +12,11 @@ function App() {
     <>
       <BrowserRouter>
         <div className="flex items-center justify-around w-20 h-40 text-center ">
-          <Link className="link-base mb-2 mr-2" to="/">
+          <Link
+            className="link-base mb-2 mr-2"
+            to="/"
+            state={{ name: "Elin", age: 23 }}
+          >
             Home
           </Link>
           <Link className="link-base mb-2 mr-2" to="/page1">
